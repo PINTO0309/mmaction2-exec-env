@@ -26,7 +26,7 @@ $ docker run --gpus all --rm -it \
 mmaction2_exec_env
 ```
 
-## 1-4. Local source code debugging
+### 1-4. Local source code debugging
 ```bash
 $ git clone https://github.com/open-mmlab/mmaction2.git \
 && cd mmaction2 \
