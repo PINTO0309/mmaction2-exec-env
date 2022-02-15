@@ -15,10 +15,12 @@ ARG WKDIR=/home/${USERNAME}
 WORKDIR ${WKDIR}
 
 RUN apt-get update \
+    && atp-get upgrade -y \
     && apt-get install -y \
         git ninja-build libglib2.0-0 \
         libsm6 libxrender-dev libxext6 \
-        ffmpeg sudo wget \
+        ffmpeg sudo wget nano \
+    && sed -i 's/# set linenumbers/set linenumbers/g' /etc/nanorc \
     && apt-get clean \
     && rm -rf /var/lib/apt/lists/*
 
