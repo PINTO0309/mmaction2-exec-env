@@ -38,3 +38,5 @@ $ python3 demo/demo_skeleton.py demo/ntu_sample.avi demo/skeleton_demo.mp4 \
 --pose-checkpoint https://download.openmmlab.com/mmpose/top_down/hrnet/hrnet_w32_coco_256x192-c78dce93_20200708.pth \
 --label-map tools/data/skeleton/label_map_ntu120.txt
 ```
+https://user-images.githubusercontent.com/33194443/154003238-f77a6120-7a67-4e42-b7ae-a4b5c5d5e7f7.mp4
+
