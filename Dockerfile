@@ -15,7 +15,7 @@ ARG WKDIR=/home/${USERNAME}
 WORKDIR ${WKDIR}
 
 RUN apt-get update \
-    && atp-get upgrade -y \
+    && apt-get upgrade -y \
     && apt-get install -y \
         git ninja-build libglib2.0-0 \
         libsm6 libxrender-dev libxext6 \
