@@ -8,7 +8,7 @@ $ docker pull pinto0309/mmaction2_exec_env:latest
 ```
 ### 1-2. Docker Build
 ```bash
-$ docker build -t mmaction2_exec_env .
+$ docker build -t pinto0309/mmaction2_exec_env:latest .
 ```
 
 ### 1-3. Docker Run
@@ -23,7 +23,7 @@ $ docker run --gpus all --rm -it \
 -e DISPLAY=$DISPLAY \
 --privileged \
 --name mmaction2_exec_env \
-mmaction2_exec_env
+pinto0309/mmaction2_exec_env:latest
 ```
 
 ### 1-4. Local source code debugging
@@ -43,7 +43,7 @@ $ docker run --gpus all --rm -it \
 -e DISPLAY=$DISPLAY \
 --privileged \
 --name mmaction2_exec_env \
-mmaction2_exec_env
+pinto0309/mmaction2_exec_env:latest
 ```
 
 ## 2. Test
