@@ -26,6 +26,26 @@ $ docker run --gpus all --rm -it \
 mmaction2_exec_env
 ```
 
+## 1-4. Local source code debugging
+```bash
+$ git clone https://github.com/open-mmlab/mmaction2.git \
+&& cd mmaction2 \
+&& git checkout 93e001f4898eccf45103c3eb2ee6d01f8220aa67 \
+&& mkdir -p data
+
+$ docker run --gpus all --rm -it \
+--shm-size=10g \
+-v `pwd`:/mmaction2 \
+-v /tmp/.X11-unix/:/tmp/.X11-unix:rw \
+--device /dev/video0:/dev/video0:mwr \
+--net=host \
+-e XDG_RUNTIME_DIR=$XDG_RUNTIME_DIR \
+-e DISPLAY=$DISPLAY \
+--privileged \
+--name mmaction2_exec_env \
+mmaction2_exec_env
+```
+
 ## 2. Test
 ```bash
 $ python3 demo/demo_skeleton.py demo/ntu_sample.avi demo/skeleton_demo.mp4 \
